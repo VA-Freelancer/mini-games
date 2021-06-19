@@ -4,9 +4,10 @@ const timeList = document.querySelector('#time-list')
 const timeEl = document.querySelector('#time')
 const board = document.querySelector('#board')
 const colors = ['F72585', 'B5179E', '7209B7', '560BAD', '480CA8', '3A0CA3', '3F37C9', '4361EE', '4895EF', '4CC9F0']
+const backBtn = null
 let time = 0
 let score = 0
-let antiscore = 0
+let antiScore = 0
 startBtn.addEventListener('click', (event) =>
 {
     event.preventDefault()
@@ -29,7 +30,7 @@ board.addEventListener('click', event =>{
         createRandomCircle()
     }
     else if(event.target === board && time !== 0){
-            antiscore++
+            antiScore++
         }
 
 
@@ -86,12 +87,6 @@ function createRandomCircle(){
 function getRandomNumber(min, max){
     return Math.round(Math.random() * (max - min) + min)
 }
-
-// function removeColor(element) {
-//     element.style.backgroundColor = '#1d1d1d'
-//     element.style.boxShadow = `0 0 2px #000`
-//
-// }
 
 function getRandomColor() {
     const index = Math.floor(Math.random() * colors.length)

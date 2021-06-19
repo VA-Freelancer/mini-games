@@ -3,17 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" >
     <link rel="stylesheet" href="styles.css" />
-    <title>Aim Training | Проект 5</title>
+    <title>Aim Training</title>
   </head>
   <body>
     <div class="screen ">
-      <h1>Aim Training</h1>
+      <h1 class="title-games">Aim Training</h1>
+      <p class="about-games"></p>
       <a href="#" class="start" id="start" >Начать игру</a>
     </div>
 
     <div class="screen ">
-      <h1>Выберите время</h1>
+      <h1>Выберите длительность игры</h1>
       <ul class="time-list" id="time-list">
         <li>
           <button class="time-btn" data-time="10">
@@ -42,6 +44,10 @@
       <h3>Осталось <span id="time">00:00</span></h3>
       <div class="board" id="board"></div>
     </div>
+    <footer>
+
+    </footer>
     <script src="app.js"></script>
+    <script src="parser.js"></script>
   </body>
 </html>
