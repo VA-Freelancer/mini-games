@@ -61,7 +61,7 @@ function  finishGame(){
     board.innerHTML = `
     <div class="total">
         <h1>Счет: <span class="primary">${score}</span></h1>
-        <h2 class="danger">Мимо: <span class="primary">${antiscore}</span></h2>
+        <h2 class="danger">Мимо: <span class="primary">${antiScore}</span></h2>
     </div>
     
     `
