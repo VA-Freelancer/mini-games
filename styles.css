@@ -20,7 +20,10 @@ a {
   color: #fff;
   text-decoration: none;
 }
-
+p, a, h3{
+  margin: 0;
+  padding: 0;
+}
 a:hover {
   color: #16D9E3;
 }
@@ -29,11 +32,10 @@ a:hover {
   font-size: 1.5rem;
 }
 
-h1 {
+.title-games {
   line-height: 1.4;
   font-size: 4rem;
-  margin: 0;
-  padding: 0;
+  margin: .67em 0;
 }
 
 .screen {
@@ -153,7 +155,9 @@ footer p{
   z-index: 999;
   font-size: 0.5em;
 }
-
+.times{
+  margin-bottom: 10px;
+}
 @media screen and (max-width: 600px) {
   .board {
 
@@ -162,16 +166,58 @@ footer p{
 
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 375px) {
+  .about-games{
+    margin-bottom: 20px;
+
+  }
   .title-games{
-      font-size: 2rem;
+      font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  h1.title-times{
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  .board {
+    width: 350px;
+    height: 350px;
+
+  }
+  .times{
+    margin-bottom: 10px;
+    padding-bottom: 30px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .title-games{
+    font-size: 2rem;
   }
   h1.title-times{
     font-size: 2rem;
   }
   .board {
-    width: 310px;
-    height: 310px;
+    width: 315px;
+    height: 315px;
 
+  }
+  .times{
+    margin-bottom: 10px;
+  }
+}
+@media all and (orientation: landscape) and (max-width: 800px) and (max-height: 400px){
+  .board {
+    width: 780px;
+    height: 300px;
+
+  }
+  .times{
+    margin-bottom: 5px;
+  }
+  .title-games{
+    font-size: 2rem;
+  }
+  h1.title-times{
+    font-size: 2rem;
   }
 }
