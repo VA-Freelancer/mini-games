@@ -1,31 +1,31 @@
-const header = document.querySelector('header');
-const footer = document.querySelector('footer');
-const section = document.querySelector('section');
-const requestURL = './score.json';
-const request = new XMLHttpRequest();
-request.open('GET', requestURL);
-request.responseType = 'json';
-request.send();
+const header = document.querySelector('header')
+const footer = document.querySelector('footer')
+const section = document.querySelector('section')
+let titleGames = document.querySelector('.title-games')
+let aboutTimes = document.querySelector('.title-times')
+let aboutGames = document.querySelector('.about-games')
+const requestURL = './score.json'
+const request = new XMLHttpRequest()
+request.open('GET', requestURL)
+request.responseType = 'json'
+request.send()
 request.onload = function() {
-    let superHeroes = request.response;
-    elementGames(superHeroes);
+    let superHeroes = request.response
+    elementGames(superHeroes)
     // showHeroes(superHeroes);
 }
 function elementGames(jsonObj) {
-    let titleGames = document.querySelector('.title-games');
-    titleGames.textContent = jsonObj['titleGame'];
-    // header.appendChild(myH1);
-
-    // let myPara = document.createElement('p');"about-header
-    let aboutGames = document.querySelector('.about-games');
-    aboutGames.innerHTML = `<p class="about-games"><span>Описание игры:</span> ${jsonObj['aboutGames']}.</p>`;
-    // header.appendChild(myPara);
-
-    let authorGames = document.createElement('div');
-    authorGames.classList.add('author-games');
-    authorGames.innerHTML = `<p>Автор: ${jsonObj['author']} Создана: ${jsonObj['created']} г.</p>`;
+    let authorGames = document.createElement('div')
+    let version = document.createElement('span')
+    version.classList.add('version')
+    authorGames.classList.add('author-games')
+    titleGames.innerHTML = `${jsonObj['titleGame']}`
+    aboutTimes.innerHTML = `${jsonObj['titleTime']}`
+    version.innerHTML = `${jsonObj['version']}`
+    aboutGames.innerHTML = `<p class="about-games"><span>Описание игры:</span> ${jsonObj['aboutGames']}</p>`
+    authorGames.innerHTML = `<span>Автор: ${jsonObj['author']}</span> <span>Создана: ${jsonObj['created']} г.</span>`
     footer.appendChild(authorGames)
-
+    footer.appendChild(version)
 }
 // function showHeroes(jsonObj) {
 //     var heroes = jsonObj['members'];

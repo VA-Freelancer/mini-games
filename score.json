@@ -1,6 +1,8 @@
 {
   "titleGame" : "Aim Training",
-  "aboutGames" : "Кликай на точки",
+  "titleTime" : "Выберите длительность игры",
+  "aboutGames" : "<ol><li>Кликай или нажимай на точки</li><li>Не попадай мимо</li></ol>",
+  "version": "beta 0.0.4",
   "created" : 2021,
   "author" : "VProger - Vikulov Andrey",
   "active" : true,

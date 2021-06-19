@@ -4,7 +4,6 @@ const timeList = document.querySelector('#time-list')
 const timeEl = document.querySelector('#time')
 const board = document.querySelector('#board')
 const colors = ['F72585', 'B5179E', '7209B7', '560BAD', '480CA8', '3A0CA3', '3F37C9', '4361EE', '4895EF', '4CC9F0']
-const backBtn = null
 let time = 0
 let score = 0
 let antiScore = 0
@@ -73,7 +72,7 @@ function createRandomCircle(){
     const circle = document.createElement('div')
     const size = getRandomNumber(10, 60)
     const {width, height} = board.getBoundingClientRect()
-    const  x = getRandomNumber(0, width - size)
+    const x = getRandomNumber(0, width - size)
     const y = getRandomNumber(0, height - size)
     circle.classList.add('circle')
     circle.style.width = `${size}px`
