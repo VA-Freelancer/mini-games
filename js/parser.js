@@ -1,6 +1,6 @@
-const header = document.querySelector('header')
+// const header = document.querySelector('header')
 const footer = document.querySelector('footer')
-const section = document.querySelector('section')
+// const section = document.querySelector('section')
 let titleGames = document.querySelector('.title-games')
 let aboutTimes = document.querySelector('.title-times')
 let aboutGames = document.querySelector('.about-games')
